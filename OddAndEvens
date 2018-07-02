@@ -1,0 +1,79 @@
+import java.util.*;
+
+public class OddsAndEvens {
+
+    public static void main(String[] args) {
+
+        System.out.println("Let’s play a game called “Odds and Evens”");
+        System.out.print("What is your name? ");
+        Scanner input = new Scanner(System.in);
+        String name = input.nextLine();
+
+        System.out.println("Hi " + name + ", which do you choose? (O)dds or (E)vens? ");
+        String answer = input.nextLine();
+
+        if (answer.equalsIgnoreCase("O")) {
+            System.out.println(name + " has picked Odds! The computer will be Evens.");
+        } else if (answer.equalsIgnoreCase("E")) {
+            System.out.println(name + " has picked Evens! The computer will be Odds.");
+        } else {
+            System.out.println("Please choose O or E ");
+            answer = input.nextLine();
+            while (!answer.equalsIgnoreCase("O") && !answer.equalsIgnoreCase("E")) {
+                System.out.println("Please choose O or E");
+                answer = input.nextLine();
+
+                System.out.println("Thank you!");
+                if (answer.equalsIgnoreCase("O")) {
+                    System.out.println(name + " has picked Odds! The computer will be Evens.");
+                } else if (answer.equalsIgnoreCase("E")) {
+                    System.out.println(name + " has picked Evens! The computer will be Odds.");
+                }
+            }
+        }
+
+        System.out.println("---------------------------------------------------");
+        System.out.print("How many “fingers” do you put out? Max is 5 ");
+        
+        int userNumber;
+        userNumber = input.nextInt();
+
+        while (userNumber >= 6) {
+            System.out.println("Remeber, max is 5 ");
+            userNumber = input.nextInt();
+        }
+        System.out.println("Thank you. Your number is " + userNumber);
+        Random rand = new Random();
+        int computerNumber = rand.nextInt(6);
+        System.out.println("The computer plays " + computerNumber + " fingers.");
+        System.out.println("---------------------------------------------------");
+        System.out.println(" ");
+        int sum = userNumber + computerNumber;
+        System.out.println(userNumber + " + " + computerNumber + " = " + sum);
+
+        if ((sum) % 2 == 0) {
+            System.out.println(sum + " is ...Even! ");
+        } else {
+            System.out.println(sum + " is ...Odd! ");
+        }
+
+        if ((sum) % 2 != 0 && answer.equalsIgnoreCase("O")) {
+            System.out.print("That means " + name + " wins! Congratulations:)");
+        } else if ((sum) % 2 == 0 && !answer.equalsIgnoreCase("O")) {
+            System.out.print("That means " + name + " wins! Congratulations:)");
+        } else {
+            System.out.print("That means Computer wins! :)");
+        }
+
+    }
+        }
+
+
+
+
+
+
+
+
+
+
