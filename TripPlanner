@@ -12,23 +12,23 @@ public class Main {
     private static void witaj() {
         Scanner input = new Scanner(System.in);
         System.out.println("Witaj w Vacation Planner!");
-        System.out.print("Jak masz na imię?" + " ");
+        System.out.print("Jak masz na imię? ");
         String name = input.nextLine();
-        System.out.print("Witaj" + " " + name + " " + "gdzie chcesz pojechać?" + " ");
+        System.out.print("Witaj " + name + " " + "gdzie chcesz pojechać? ");
         String place = input.nextLine();
-        System.out.println("Super!" + " " + place + " " + "to świetny wybór :)");
+        System.out.println("Super! " + place + " to świetny wybór :)");
         System.out.println("*********************");
     }
 
     private static void travel() {
             Scanner input=new Scanner(System.in);
-            System.out.print("Na ile dni chcesz pojechać?" + " ");
+            System.out.print("Na ile dni chcesz pojechać? ");
             int time = input.nextInt();
-            System.out.print("Jak duży budżet posiadasz (w PLN)?" + " ");
+            System.out.print("Jak duży budżet posiadasz (w PLN)? ");
             int budget = input.nextInt();
             System.out.print(" ");
-            System.out.println("Twój wyjazd będzie trwał" + " " + time + " dni. To oznacza, że na odpoczynku spędziesz" + " " + time*24 + " " + "godzin lub" + " " + time*24*60 + " " + "minut. Masa czasu, prawda?");
-            System.out.println("Twój budżet to" + " " + budget + "PLN. " + "Każdego dnia będziesz miał/a" + " " + budget/time + " " + "PLN do dyspozycji. Już wiesz na co je wydasz?");
+            System.out.println("Twój wyjazd będzie trwał " + time + " dni. To oznacza, że na odpoczynku spędziesz " + time*24 + " godzin lub " + time*24*60 + " minut. Masa czasu, prawda?");
+            System.out.println("Twój budżet to " + budget + "PLN. " + "Każdego dnia będziesz miał/a " + budget/time + " PLN do dyspozycji. Już wiesz na co je wydasz?");
         }
 
     }
